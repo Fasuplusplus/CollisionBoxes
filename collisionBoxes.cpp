@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 #include <string>
-double step = 0.00001;
+double step = 0.0001;
 class body {
 public:
     double mass = 1;
