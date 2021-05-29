@@ -36,6 +36,7 @@ void placebody(body &i, double Xpos, double radius, double Xspeed, double mass, 
     }
 }
 
+
 int main() {
     placebody(box[0], 3.348, 2, 5, 1, true);
     placebody(box[1], 10.007, 2, -5, 1, true);
@@ -44,7 +45,7 @@ int main() {
         for (int i = 0; i < boxcount; i++) {
             for (int e = 0; e < boxcount; e++) {
                 if (e != i) {
-                    if (box[i].checkCollision(box[e].Xpos, box[e].radius)) {
+                    if (box[i].checkCollision(box[e].Xpos, box[e].radius) || box[i].checkCollision(wall.Xpos, wall.radius)) {
                         printf("boom");
                         collision = true;
                         break;
